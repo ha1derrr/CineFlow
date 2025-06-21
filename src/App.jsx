@@ -18,11 +18,11 @@ const API_OPTIONS = {
 function App() {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-  
+
   const [movieList, setMovieList] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const [trendingMovies, setTrendingMovies] = useState([]);
   useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm]);
   const fetchMovies = async (query = "") => {
@@ -73,7 +73,7 @@ function App() {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src="/public/hero.png" alt="Hero Banner" />
+          <img src="/hero.png" alt="Hero Banner" />
           <h1>
             Find <span className="text-gradient ">Movies</span>You will enjoy
             without the hassle
